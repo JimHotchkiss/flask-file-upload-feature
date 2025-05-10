@@ -1,0 +1,94 @@
+/* static/css/style.css */
+
+body {
+  font-family: sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  color: #4a90e2;
+}
+
+/* reuse the file‑input and submit styles from before */
+input[type="file"]::file-selector-button { /* … */ }
+input[type="submit"] { /* … */ }
+
+/* give a little breathing room */
+form {
+  margin: 2rem;
+  font-family: sans-serif;
+}
+
+/* -----------------------------------
+   Style the file‑upload button
+   ----------------------------------- */
+/* WebKit browsers */
+input[type="file"]::-webkit-file-upload-button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Firefox and modern browsers */
+input[type="file"]::file-selector-button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover,
+input[type="file"]::file-selector-button:hover {
+  background-color: #357ab8;
+}
+
+/* space between the file‑picker and submit */
+input[type="file"] {
+  margin-bottom: 1rem;
+  /* optional: align baseline with button text */
+  vertical-align: middle;
+}
+
+/* -----------------------------------
+   Style the submit button
+   ----------------------------------- */
+input[type="submit"] {
+  display: inline-block;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+input[type="submit"]:disabled {
+  background-color: #94d3a2;
+  cursor: not-allowed;
+  transform: none;
+}
+
